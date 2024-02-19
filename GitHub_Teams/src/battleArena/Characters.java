@@ -6,10 +6,10 @@ public abstract class Characters {
 	private int hp;
 	private boolean specialAbilityActive;
 	
-	public Characters(String name, int hp, boolean specialAbilityActive) {
+	public Characters(String name, boolean specialAbilityActive) {
 		super();
 		this.name = name;
-		this.hp = hp;
+		this.hp = 100;
 		this.specialAbilityActive = specialAbilityActive;
 	}
 	
