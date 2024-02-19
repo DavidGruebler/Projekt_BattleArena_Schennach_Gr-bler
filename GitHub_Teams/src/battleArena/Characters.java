@@ -1,4 +1,4 @@
-package battleArea;
+package battleArena;
 
 public class Characters {
 
