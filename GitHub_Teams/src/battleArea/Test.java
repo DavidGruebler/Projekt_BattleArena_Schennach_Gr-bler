@@ -1,4 +1,4 @@
-package geoMetry;
+package battleArea;
 
 public class Test {
 
