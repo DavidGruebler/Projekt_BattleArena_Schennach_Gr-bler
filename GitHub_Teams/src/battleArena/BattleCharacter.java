@@ -1,12 +1,12 @@
 package battleArena;
 
-public abstract class Characters {
+public abstract class BattleCharacter {
 	
 	private String name;
 	protected int hp;
 	private boolean specialAbilityActive;
 	
-	public Characters(String name, boolean specialAbilityActive) {
+	public BattleCharacter(String name, boolean specialAbilityActive) {
 		super();
 		this.name = name;
 		this.hp = 100;
@@ -15,7 +15,7 @@ public abstract class Characters {
 	
 	public  abstract void getDamage(int hp);
 	
-	public abstract void attack(Character enemy);
+	public abstract void attack(BattleCharacter enemy);
 	
 	public String getName() {
 		return name;

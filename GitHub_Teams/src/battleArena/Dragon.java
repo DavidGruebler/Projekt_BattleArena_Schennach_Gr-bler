@@ -2,7 +2,7 @@ package battleArena;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Dragon extends Characters {
+public class Dragon extends BattleCharacter {
 
 	private boolean fly;
 
@@ -17,7 +17,7 @@ public class Dragon extends Characters {
 		this.setHp(this.getHp()-hp);
 		
 	}
-
+	
 	@Override
 	public void attack(Character enemy) {
 		int attackValue = ThreadLocalRandom.current().nextInt(20, 25 +1);
