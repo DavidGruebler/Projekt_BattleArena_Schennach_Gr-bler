@@ -3,7 +3,7 @@ package battleArena;
 public abstract class Characters {
 	
 	private String name;
-	private int hp;
+	protected int hp;
 	private boolean specialAbilityActive;
 	
 	public Characters(String name, boolean specialAbilityActive) {
