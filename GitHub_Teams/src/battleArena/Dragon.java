@@ -9,29 +9,37 @@ public class Dragon extends BattleCharacter {
 	public Dragon(String name, int hp, boolean specialAbilityActive) {
 		super(name, specialAbilityActive);
 		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override
-	public void getDamage(int hp) {
-		this.setHp(this.getHp()-hp);
+	public void getDamage(int points) {
+		this.hp -= points;
 		
 	}
 	
 	@Override
-	public void attack(Character enemy) {
+	public void attack(BattleCharacter enemy) {
 		int attackValue = ThreadLocalRandom.current().nextInt(20, 25 +1);
 		
-		if(flyActive() == true) {
+		
+		if(fly == true) {
 			attackValue -= ThreadLocalRandom.current().nextInt(5, 10 +1);
-		 this.hp += 10;
-			
+		 
+		}
+		enemy.getDamage(attackValue);
 		}
 		
-	}
+	
 
 	public void flyActive(boolean fly, int hp) {
-		
+		if(fly == true) {
+			hp+=10;
+		}
 	}
-	
-	
+	public void flyDeActive(boolean fly, int hp) {
+			if(fly == false) {
+				hp-=10;
+			}
+}
 }
