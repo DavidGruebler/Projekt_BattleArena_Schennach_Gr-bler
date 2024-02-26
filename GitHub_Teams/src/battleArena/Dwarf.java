@@ -28,6 +28,14 @@ public class Dwarf extends BattleCharacter {
     public void attack(BattleCharacter enemy) {
         int attackValue = ThreadLocalRandom.current().nextInt(15, 25 + 1);
         enemy.getDamage(attackValue);
+        
+    public void activatedrawfClout() {
+    	
+    }
+    
+    public void deactivatedrawfClout() {
+    	
+    }
   
     }
 }
