@@ -13,8 +13,8 @@ public class Dragon extends BattleCharacter {
 	}
 
 	@Override
-	public void getDamage(int hp) {
-		this.setHp(this.getHp()-hp);
+	public void getDamage(int points) {
+		this.hp -= points;
 		
 	}
 	
@@ -22,10 +22,12 @@ public class Dragon extends BattleCharacter {
 	public void attack(BattleCharacter enemy) {
 		int attackValue = ThreadLocalRandom.current().nextInt(20, 25 +1);
 		
+		
 		if(fly == true) {
 			attackValue -= ThreadLocalRandom.current().nextInt(5, 10 +1);
 		 
-			
+		}
+		enemy.getDamage(attackValue);
 		}
 		
 	
