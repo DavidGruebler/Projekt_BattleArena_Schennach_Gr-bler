@@ -19,7 +19,7 @@ public class Dragon extends BattleCharacter {
 	}
 	
 	@Override
-	public void attack(Character enemy) {
+	public void attack(BattleCharacter enemy) {
 		int attackValue = ThreadLocalRandom.current().nextInt(20, 25 +1);
 		
 		if(fly == true) {
