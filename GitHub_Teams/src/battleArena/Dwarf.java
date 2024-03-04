@@ -30,6 +30,7 @@ public class Dwarf extends BattleCharacter {
         enemy.getDamage(attackValue);
         
     public void activatedrawfClout() {
+    
     	
     }
     

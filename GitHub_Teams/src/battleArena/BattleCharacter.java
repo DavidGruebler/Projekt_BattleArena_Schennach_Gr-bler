@@ -17,6 +17,10 @@ public abstract class BattleCharacter {
 	
 	public abstract void attack(BattleCharacter enemy);
 	
+	public abstract void activateSpecialAbility();
+	
+	public abstract void deactivateSpecialAbility();
+	
 	public String getName() {
 		return name;
 	}
