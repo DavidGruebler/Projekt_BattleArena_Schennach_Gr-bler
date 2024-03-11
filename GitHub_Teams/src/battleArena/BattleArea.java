@@ -3,7 +3,7 @@ package battleArena;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-class BattleArena {
+class BattleArea {
 	
     private BattleCharacter fighter1;
     private BattleCharacter fighter2;
@@ -11,7 +11,7 @@ class BattleArena {
     
     Scanner sc = new Scanner(System.in);
 
-    public BattleArena(BattleCharacter fighter1, BattleCharacter fighter2) {
+    public BattleArea(BattleCharacter fighter1, BattleCharacter fighter2) {
         this.fighter1 = fighter1;
         this.fighter2 = fighter2;
     }
@@ -20,13 +20,23 @@ class BattleArena {
     	
     	int fighterTurn = ThreadLocalRandom.current().nextInt(1, 2+ 1);
 
-        while (fighter1.getHp() > 0 && fighter2.getHp() > 0) {
-            if (fighterTurn == 1) {
-            	simulteCombat(fighter1, fighter2);
-            } else {
-            	simulteCombat(fighter2, fighter1);
+    	while (winner == null) {
+            // Runde 1: Charakter 1 greift an
+            simulteCombat(fighter1, fighter2);
+
+            // Runde 2: Charakter 2 greift an (falls noch am Leben)
+            if (fighter2.getHp() > 0) {
+                simulteCombat(fighter2, fighter1);
             }
         }
+    	
+    	// while (fighter1.getHp() > 0 && fighter2.getHp() > 0) {
+         //   if (fighterTurn == 1) {
+           // 	simulteCombat(fighter1, fighter2);
+            //} else {
+            	//simulteCombat(fighter2, fighter1);
+            //}
+        //}
         
         if(winner == fighter1) {
         	System.out.println("The winner is: " + fighter1.getName());

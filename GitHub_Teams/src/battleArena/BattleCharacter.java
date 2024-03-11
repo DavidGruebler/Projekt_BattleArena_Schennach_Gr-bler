@@ -6,11 +6,10 @@ public abstract class BattleCharacter {
 	protected int hp;
 	private boolean specialAbilityActive;
 	
-	public BattleCharacter(String name, boolean specialAbilityActive) {
-		super();
+	public BattleCharacter(String name,int hp,boolean specialAbilityActive ) {
 		this.name = name;
 		this.hp = 100;
-		this.specialAbilityActive = specialAbilityActive;
+		this.specialAbilityActive = false;
 	}
 	
 	public  abstract void getDamage(int hp);
