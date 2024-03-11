@@ -36,18 +36,21 @@ class BattleArena {
         case 1:
         	System.out.println(attacker.getName()+ " hat angegriffen!");
         	fighter1.attack(fighter2);
+        	break;
         	
         case 2:
         	System.out.println(attacker.getName()+ " hat die Spezialfähigkeit eingesetzt!");
         	fighter1.activateSpecialAbility();
+        	break;
         	
         case 3:
         	System.out.println(attacker.getName()+ " hat die Spezialfähigkeit deaktiviert!");
         	fighter1.deactivateSpecialAbility();
+        	break;
         	
         default:
         	System.out.println("Nur 1. Attack, 2. Activate special ability, 3. Deactivate special ability! ");
-        
+        	break;
         }
     	
     }
