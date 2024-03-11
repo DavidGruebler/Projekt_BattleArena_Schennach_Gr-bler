@@ -16,7 +16,7 @@ public class Dragon extends BattleCharacter {
 
 	public Dragon(String name, int hp, boolean specialAbilityActive) {
 		super(name, specialAbilityActive);
-		// TODO Auto-generated constructor stub
+		// TODO Auto-generated constructor 
 		
 	}
 
