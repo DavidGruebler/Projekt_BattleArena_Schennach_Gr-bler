@@ -6,13 +6,14 @@ public class Dwarf extends BattleCharacter {
 	
 		
 
-	public Dwarf(String name, int hp, boolean specialAbilityActive, boolean drawClout) {
-		super(name, specialAbilityActive);
-		
+	
+	
+	
+	public Dwarf(String name, int hp, boolean specialAbilityActive) {
+		super(name, hp, specialAbilityActive);
+		// TODO Auto-generated constructor stub
 	}
 
-	
-	
 	@Override
     public void getDamage(int points) {
         this.hp -= points;
