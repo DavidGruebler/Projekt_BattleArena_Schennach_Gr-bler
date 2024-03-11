@@ -4,24 +4,19 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Dwarf extends BattleCharacter {
 	
-		
-
-	
-	
-	
 	public Dwarf(String name, int hp, boolean specialAbilityActive) {
 		super(name, hp, specialAbilityActive);
-		// TODO Auto-generated constructor stub
+
 	}
 
 	@Override
     public void getDamage(int points) {
-        this.hp -= points;
+			this.hp -= points;
     }
 
     @Override
     public void attack(BattleCharacter enemy) {
-        int attackValue = ThreadLocalRandom.current().nextInt(15, 25 + 1);
+         attackValue = ThreadLocalRandom.current().nextInt(15, 25 + 1);
       
         if(this.posibilitySpecialAttack()== true) {
         	attackValue *= 2;

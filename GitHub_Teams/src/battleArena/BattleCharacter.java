@@ -5,6 +5,7 @@ public abstract class BattleCharacter {
 	private String name;
 	protected int hp;
 	private boolean specialAbilityActive;
+	int attackValue;
 	
 	public BattleCharacter(String name,int hp,boolean specialAbilityActive ) {
 		this.name = name;
@@ -38,10 +39,12 @@ public abstract class BattleCharacter {
 	public void setSpecialAbilityActive(boolean specialAbilityActive) {
 		this.specialAbilityActive = specialAbilityActive;
 	}
-
-	@Override
-	public String toString() {
-		return "Characters [name=" + name + ", hp=" + hp + ", specialAbilityActive=" + specialAbilityActive + "]";
-	}
 	
+	public int getAttackValue() {
+		return attackValue;
+	}
+
+	public void setAttackValue(int attackValue) {
+		this.attackValue = attackValue;
+	}	
 }
