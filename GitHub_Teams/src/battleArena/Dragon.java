@@ -4,7 +4,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Dragon extends BattleCharacter {
 
-	private boolean fly;
 	int bonus = 10;
 
 	public int getBonus() {
