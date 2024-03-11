@@ -43,7 +43,7 @@ public class Dwarf extends BattleCharacter {
 		}else if ((this.getHp() < 10) && (value <= 7)){
 			return true;
 			
-		}
+		}	
 		return false;
 	}
 	
