@@ -12,6 +12,9 @@ public class Dwarf extends BattleCharacter {
 	@Override
     public void getDamage(int points) {
 			this.hp -= points;
+			if(this.getHp() < 0) {
+				this.setHp(0);
+			}
     }
 
     @Override
