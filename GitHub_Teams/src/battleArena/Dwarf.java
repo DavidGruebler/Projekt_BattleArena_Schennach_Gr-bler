@@ -6,7 +6,6 @@ public class Dwarf extends BattleCharacter {
 	
 	public Dwarf(String name) {
 		super(name);
-
 	}
 	
 	/**
