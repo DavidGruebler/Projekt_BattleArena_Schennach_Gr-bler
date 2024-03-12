@@ -48,19 +48,19 @@ class BattleArea {
         
         case 1:
         	System.out.println(attacker.getName()+ " hat angegriffen!");
-        	fighter1.attack(fighter2);
+        	attacker.attack(victim);
         	printStatusInformations();
         	break;
         	
         case 2:
         	System.out.println(attacker.getName()+ " hat die Spezialfähigkeit eingesetzt!");
-        	fighter1.activateSpecialAbility();
+        	attacker.activateSpecialAbility();
         	printStatusInformations();
         	break;
         	
         case 3:
         	System.out.println(attacker.getName()+ " hat die Spezialfähigkeit deaktiviert!");
-        	fighter1.deactivateSpecialAbility();
+        	attacker.deactivateSpecialAbility();
         	printStatusInformations();
         	break;
         	
