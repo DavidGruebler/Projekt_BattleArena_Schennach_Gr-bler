@@ -4,8 +4,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Dwarf extends BattleCharacter {
 	
-	public Dwarf(String name, int hp, boolean specialAbilityActive) {
-		super(name, hp, specialAbilityActive);
+	public Dwarf(String name) {
+		super(name);
 
 	}
 

@@ -6,8 +6,8 @@ public class Dragon extends BattleCharacter {
 	
 	int bonus = 10;
 	
-	public Dragon(String name, int hp, boolean specialAbilityActive) {
-		super(name, hp, specialAbilityActive);
+	public Dragon(String name) {
+		super(name);
 	}
 
 	@Override
