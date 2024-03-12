@@ -8,7 +8,11 @@ public class Dwarf extends BattleCharacter {
 		super(name);
 
 	}
-
+	
+	/**
+	 * Reduces the heath points of the character by the specified amount of points(HP can not be negative).
+	 * @param points. The amount of damage to be inflicted.
+	 */
 	@Override
     public void getDamage(int points) {
 			this.hp -= points;
@@ -16,7 +20,10 @@ public class Dwarf extends BattleCharacter {
 				this.setHp(0);
 			}
     }
-
+	/**
+	 * Attacks the  enemy with a random attack value. If the special ability is active then the damage doubles.
+	 * @param enemy. The enemy to attack.
+	 */
     @Override
     public void attack(BattleCharacter enemy) {
          attackValue = ThreadLocalRandom.current().nextInt(15, 25 + 1);
@@ -31,7 +38,10 @@ public class Dwarf extends BattleCharacter {
         
     }
 
-
+    /**	
+     * Determines the possibility of triggering a special attack based on the current health points.
+     * @return true if a special attack is possible, otherwise false.
+     */
 	public boolean posibilitySpecialAttack() {
 		int value = ThreadLocalRandom.current().nextInt(1, 10 + 1);
 		
@@ -48,6 +58,9 @@ public class Dwarf extends BattleCharacter {
 		return false;
 	}
 	
+	/**
+	 * Activates the special ability if the character's health points are less than 50.
+	 */
 	@Override
 	public void activateSpecialAbility() {
 		if(this.getHp()<50) {
@@ -55,7 +68,10 @@ public class Dwarf extends BattleCharacter {
 		}
 		
 	}
-
+	
+	/**
+	 * Deactivates the special ability.
+	 */
 	@Override
 	public void deactivateSpecialAbility() {
 		this.setSpecialAbilityActive(false);
