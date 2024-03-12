@@ -38,10 +38,20 @@ class BattleArea {
 
     
     public void simulateCombat(BattleCharacter attacker, BattleCharacter victim) {
-    	
-    	System.out.println(attacker.getName() + " ist am Zug");
-    	System.out.println("Choose action: 1. Attack, 2. Activate special ability, 3. Deactivate special ability");
-    
+    	    	
+    	System.out.println("====================================");
+
+    	System.out.println("| " + attacker.getName() + " ist am Zug!                |");
+
+    	System.out.println("====================================");
+    	System.out.println("| 1. Attackieren                   |");
+    	System.out.println("| 2. Spezialfähigkeit aktivieren   |");
+    	System.out.println("| 3. Spezialfähigkeit deaktivieren |");
+    	System.out.println("====================================");
+
+    	System.out.println("Wähle deine Aktion (1-3): ");
+
+    	    	
     	int action = sc.nextInt();
         
         switch (action) {
@@ -73,10 +83,20 @@ class BattleArea {
         }
     	
     }
+  
     
     public void printStatusInformations() {
-    	System.out.println("Fighter 1: " + fighter1.getName() + " - HP: " + fighter1.getHp() + ", Special Ability: " + fighter1.isSpecialAbilityActive()+ "Angriffspunkt: " + fighter1.getAttackValue());
-        System.out.println("Fighter 2: " + fighter2.getName() + " - HP: " + fighter2.getHp() + ", Special Ability: " + fighter2.isSpecialAbilityActive()+ "Angriffspunkt: " + fighter2.getAttackValue());
-    }
-    
+    	  System.out.println("====================================");
+    	  System.out.println("         ** Fighter 1 **");
+    	  System.out.println("  Name: " + fighter1.getName());
+    	  System.out.println("  HP: " + fighter1.getHp());
+    	  System.out.println("  Fliegen: " + fighter1.isSpecialAbilityActive());
+    	  System.out.println("====================================");
+    	  System.out.println("         ** Fighter 2 **");
+    	  System.out.println("  Name: " + fighter2.getName());
+    	  System.out.println("  HP: " + fighter2.getHp());
+    	  System.out.println("  Kopfnuss: " + fighter2.isSpecialAbilityActive());
+    	  System.out.println("====================================");
+    	}
+
 }

@@ -5,7 +5,7 @@ public abstract class BattleCharacter {
 	private String name;
 	protected int hp;
 	private boolean specialAbilityActive;
-	int attackValue;
+	protected int attackValue;
 	
 	public BattleCharacter(String name ) {
 		this.name = name;

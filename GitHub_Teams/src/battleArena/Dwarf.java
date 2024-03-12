@@ -20,16 +20,13 @@ public class Dwarf extends BattleCharacter {
     @Override
     public void attack(BattleCharacter enemy) {
          attackValue = ThreadLocalRandom.current().nextInt(15, 25 + 1);
-         System.out.println(attackValue);
          if(this.isSpecialAbilityActive()) {
 	        if(this.posibilitySpecialAttack()== true) {
-	        	System.out.println("fehler");
 	        	attackValue *= 2;
 	        }  else {
 	        	attackValue /= 2;
 	        }
          }
-        System.out.println(attackValue);
         enemy.getDamage(attackValue);
         
     }
