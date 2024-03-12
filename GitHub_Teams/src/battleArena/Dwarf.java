@@ -23,9 +23,8 @@ public class Dwarf extends BattleCharacter {
       
         if(this.posibilitySpecialAttack()== true) {
         	attackValue *= 2;
-        }  
-        if(this.posibilitySpecialAttack()==false) {
-        	attackValue /=2;
+        }  else {
+        	attackValue /= 2;
         }
         enemy.getDamage(attackValue);
         

@@ -7,7 +7,7 @@ public abstract class BattleCharacter {
 	private boolean specialAbilityActive;
 	int attackValue;
 	
-	public BattleCharacter(String name,int hp,boolean specialAbilityActive ) {
+	public BattleCharacter(String name ) {
 		this.name = name;
 		this.hp = 100;
 		this.specialAbilityActive = false;
