@@ -23,6 +23,11 @@ class BattleArea {
     	this.fighter2 = chooseCharacters(sc);
     }
     
+    /**
+     * Starts the battle between the two characters.
+     * Picks who goes first at random, then lets them take turns attacking until one character has no health left.
+     * Announces the winner at the end.
+     */
     public void startFight() {
         int fighterTurn = ThreadLocalRandom.current().nextInt(1, 2 + 1);
 
@@ -43,6 +48,15 @@ class BattleArea {
         }
     }
 
+    /**
+     * Simulates a single round of combat between two characters.
+     * Shows the current player options to attack, use their special ability, or turn it off.
+     * Based on the choice, the player can attack the other character, use their special ability, or turn it off.
+     * After the action, it checks health to see if someone won.
+     * 
+     * @param attacker The character who is taking their turn.
+     * @param victim The character who is being attacked.
+     */
     
     public void simulateCombat(BattleCharacter attacker, BattleCharacter victim) {
     	    	
@@ -91,7 +105,9 @@ class BattleArea {
     	
     }
   
-    
+    /**
+     * Shows the health and special ability status for both fighters.
+     */
     public void printStatusInformations() {
     	  System.out.println("====================================");
     	  System.out.println("         ** Fighter 1 **");
@@ -106,10 +122,27 @@ class BattleArea {
     	  System.out.println("====================================");
     	}
     
+    /**
+     * Lets the user pick a character to fight with.
+     * Shows two options: Dragon or Dwarf.
+     * Asks the user for a name for their character.
+     * Based on the choice (1 or 2), it creates a new Dragon or Dwarf object and returns it.
+     * 
+     * @param sc The scanner to get user input.
+     * @return The BattleCharacter object representing the chosen character.
+     */
+    
     public BattleCharacter chooseCharacters(Scanner sc) {
-    	System.out.println("|Player 1| \nChoose 1 for Dragon or 2 for Dwarf");
-    	String character= sc.nextLine();
-    	System.out.println("Choose a name for your character: ");
+    	
+    	System.out.println("=====================");
+    	System.out.println("| Character Selection |");
+    	System.out.println("=====================");
+    	System.out.println("| 1. Dragon  |");
+    	System.out.println("| 2. Dwarf   |");
+    	System.out.print("Enter the number to choose your character (1 or 2): ");
+    	String character = sc.nextLine();
+    	System.out.println();
+    	System.out.print("Choose a name for your mystic creature: ");
     	String name = sc.nextLine();
     	
     	switch(character) {
