@@ -11,9 +11,16 @@ class BattleArea {
     private BattleCharacter fighter2;
     private BattleCharacter winner;
     
+   
+    
+    
     public BattleArea(BattleCharacter fighter1, BattleCharacter fighter2) {
         this.fighter1 = fighter1;
         this.fighter2 = fighter2;
+    }
+    public BattleArea(Scanner sc) {
+    	this.fighter1 = chooseCharacters(sc);
+    	this.fighter2 = chooseCharacters(sc);
     }
     
     public void startFight() {
@@ -90,13 +97,30 @@ class BattleArea {
     	  System.out.println("         ** Fighter 1 **");
     	  System.out.println("  Name: " + fighter1.getName());
     	  System.out.println("  HP: " + fighter1.getHp());
-    	  System.out.println("  Fliegen: " + fighter1.isSpecialAbilityActive());
+    	  System.out.println("  Spezialfähigkeit: " + fighter1.isSpecialAbilityActive());
     	  System.out.println("====================================");
     	  System.out.println("         ** Fighter 2 **");
     	  System.out.println("  Name: " + fighter2.getName());
     	  System.out.println("  HP: " + fighter2.getHp());
-    	  System.out.println("  Kopfnuss: " + fighter2.isSpecialAbilityActive());
+    	  System.out.println("  Spezialfähigkeit: " + fighter2.isSpecialAbilityActive());
     	  System.out.println("====================================");
     	}
+    
+    public BattleCharacter chooseCharacters(Scanner sc) {
+    	System.out.println("|Player 1| \nChoose 1 for Dragon or 2 for Dwarf");
+    	String character= sc.nextLine();
+    	System.out.println("Choose a name for your character: ");
+    	String name = sc.nextLine();
+    	
+    	switch(character) {
+    	case "1" : return new Dragon(name);
+    	
+    	case "2" : return new Dwarf(name);
+    	
+    	default : return null;
+    	}
+    
+    }
+    
 
 }
