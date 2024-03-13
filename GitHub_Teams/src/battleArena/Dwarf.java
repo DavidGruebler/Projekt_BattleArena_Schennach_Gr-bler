@@ -62,7 +62,7 @@ public class Dwarf extends BattleCharacter {
 	 */
 	@Override
 	public void activateSpecialAbility() {
-		if(this.posibilitySpecialAttack() == true) {
+		if(this.getHp() < 50) {
 			this.setSpecialAbilityActive(true);
 		}
 		
